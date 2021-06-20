@@ -1,6 +1,8 @@
 
 # ARTIF
 
+![logo](images/logo.png)
+
 ARTIF is a new advanced threat intelligence framework built that adds another abstraction layer on the top of MISP to identify threats and malicious web traffic on the basis of IP reputation and historical data. It also performs automatic enrichment and threat scoring by collecting, processing and correlating observables based on different factors. 
 
 Key features of ARTIF includes:- 
@@ -22,6 +24,28 @@ It is real time Threat Intel Framework that can help identify malicious IPs even
 - Has latency of ~ 180 ms > 10x faster than commercial products.
 - Historical IPs are stored for analysis and used in scoring on the basis of past records and patterns.
 - Adds score to each IP in addition to other metadata. 
+
+---
+
+## Pre-Requisites
+
+- What is MISP and how to install?
+
+Taken from MISP : “MISP is an open source software solution for collecting, storing, distributing and sharing cyber security indicators and threats about cyber security incidents analysis and malware analysis. MISP is designed by and for incident analysts, security and ICT professionals or malware reversers to support their day-to-day operations to share structured information efficiently.”
+
+MISP can be installed using source code or their pre-built AWS images. More information about MISP installation can be found at their website.
+
+- We need to have subscription to maxmind in order to populate meta-data for the IP.
+To add your sub key edit docker-compose.yaml
+```
+  maxmind:
+    image: maxmindinc/geoipupdate
+    environment: 
+      GEOIPUPDATE_ACCOUNT_ID: xxxxx
+      GEOIPUPDATE_LICENSE_KEY: xxxxxxxxxxxxxx
+```
+
+---
 
 ## Installation 
 
@@ -80,32 +104,35 @@ The score represents a lower risk for the IP as the threat is high. The higher t
 
 Setting up docker containers
 
+![docker](images/docker.gif)
+
 Starting ARTIF 
 
+![artif](images/artif_in.gif)
 
-Adding Custom feeds
- 
+---
+
+## Adding Custom feeds
 
 ARTIF supports synchronization with MISP. It syncs MISP feeds, picking the most recent config from settings.yaml and all the new events modified from MISP are reflected in settings.yaml. To add new IP, just login to MISP and click on add feed page. Once the IP is added, the cronjob will pick it up according to its schedule and will be processed automatically.
+
 ## Contributing
 
-Contributions are always welcome!
+Contributions are always welcome! 
+See `contributing.md` for ways to get started. Please adhere to this project's `code of conduct`.
 
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
-
-Communicating with Team
+## Communicating with Team
 The easiest way to communicate with the team is via GitHub Issues.
 
 Please file new issues, feature requests, and suggestions, but search for similar open/closed pre-existing issues before creating a new issue.  
+
+---
+
 ## Documentation
 
 ARTIF being a threat framework, is highly useful for visibility inside organization traffic. It is completely written in python and collects intelligence on an IP from various feeds. It then sends this data to a correlation engine which generates a threat score where historical data is also one of the factors taken into account for threat score calculation.
 
-
 Every time a new IP hits the service a celery worker is assigned the task to update its score in the database by coordinating with the correlation engine, which in turn gathers data from multiple sources. To ensure that the data isn’t stale (default ‘stale time’ value is 24hrs), we run a worker for each IP in the database which hasn’t been updated for the past ‘stale time’. As with all the other parameters this value is configurable too. Since the threat score calculation is the key to all of this, we’ve laid a lot of emphasis on it. Apart from the well-known threat feeds such as MISP, Cortex, Alien Vault, VirusTotal, and popular blacklist of IPs, we can also add custom feeds according to business and security use case, where customer loyalty can also be used as a parameter for threat score calculation.
-
 
 For ease of configuration, ARTIF needs the following input to run itself: 
 
@@ -119,6 +146,7 @@ ARTIF has additional functionality to keep track of old feeds. The default confi
 
 All the historical IP will be removed from database after 7 days by default.
 
+![arch](images/arch.png)
   
 ## Usage/Examples
 
@@ -139,6 +167,8 @@ python3 manage.py crontab show
 ```
 This will auto-update the feed. By default every 24 hrs it will check the MISP for the latest feed and replenish the DB with new IP from feeds. IPs older than 7 
 days are also removed by the scheduler.
+
+---
   
 ## FAQ
 
@@ -154,7 +184,6 @@ This indeed takes time sometimes from 30 mins to 90 mins depending upon your int
 
 Solution: In such cases, run the update_check.py file without -s argument. This would download all the IPs from the feed. This error generally happens when you abruptly interrupt the execution of update_check.py during its initial phase.
 
-  
 ## License
 
 [MIT](https://github.com/CRED-Dev/ARTIF/blob/develop/LICENSE)
@@ -168,9 +197,7 @@ Solution: In such cases, run the update_check.py file without -s argument. This 
 ## Roadmap
 
 - Application Firewall integration support with ARTIF for automatic blocking malicious IPs based on their threat score.
-
 - Metric visibility over UI dashboard in form of graphical representation to better visualize the threats.
-
   
 ## Acknowledgements
 

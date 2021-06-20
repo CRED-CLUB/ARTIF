@@ -1,0 +1,57 @@
+version: '3.7'
+
+services:
+  mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+
+  maxmind:
+    image: maxmindinc/geoipupdate
+    environment: 
+      GEOIPUPDATE_ACCOUNT_ID: xxxxx
+      GEOIPUPDATE_LICENSE_KEY: xxxxxxxxxxxx
+      GEOIPUPDATE_EDITION_IDS: GeoLite2-ASN GeoLite2-City GeoLite2-Country
+      GEOIPUPDATE_FREQUENCY: 24
+    volumes:
+      - "./maxmindDBs:/usr/share/GeoIP"
+  
+  maxmind_city:
+    image: klauspost/geoip-service
+    volumes:
+      - type: bind
+        source: ./maxmindDBs/GeoLite2-City.mmdb
+        target: /data/geodb.mmdb
+    ports:
+      - "3000:5000"
+    depends_on:
+      - maxmind
+    restart: on-failure
+
+  ip2asn:
+    build:
+      context: iptoasn
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: ./maxmindDBs/GeoLite2-ASN.mmdb
+        target: /data/GeoLite2-ASN.mmdb
+      - type: bind
+        source: ./maxmindDBs/GeoLite2-City.mmdb
+        target: /data/GeoLite2-City.mmdb
+      - type: bind
+        source: ./maxmindDBs/GeoLite2-Country.mmdb
+        target: /data/GeoLite2-Country.mmdb
+    ports:
+      - "3001:8080"
+    depends_on:
+      - maxmind
+    restart: on-failure
+    command: "/opt/echoip/echoip"
+volumes:
+    mongodb_data_container:

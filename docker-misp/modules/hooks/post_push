@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker tag $IMAGE_NAME $DOCKER_REPO:modules-latest
+docker push $DOCKER_REPO:modules-latest
