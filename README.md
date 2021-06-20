@@ -49,7 +49,7 @@ To add your sub key edit docker-compose.yaml
 
 ## Installation 
 
-1 - Clone the repository using git or download the zip file.
+1. Clone the repository using git or download the zip file.
 ```
 git clone https://github.com/CRED-Dev/ARTIF/
 ````
