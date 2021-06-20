@@ -92,7 +92,7 @@ The output being
 ```
 The score represents a lower risk for the IP as the threat score is high. The higher the score the lesser the non-malicious IP it is. 
 
-**Note:** Instance with 8GB RAM are recommended for ARTIF  installation.
+**Note:** Instance with 8GB RAM is recommended for ARTIF installation.
 
 Setting up docker containers
 
