@@ -116,11 +116,11 @@ Every time a new IP hits the service a celery worker is assigned the task to upd
 
 For ease of configuration, ARTIF needs the following input to run itself: 
 
-- Feeds in MISP instance.
+- Feeds in MISP instance
 - A MISP key for communicating with the MISP instance
-- A MISP URL to connect to MISP instance using the MISP key.
+- A MISP URL to connect to MISP instance using the MISP key
 
-Upon running, the data is processed and stored on a MongoDB container. MongoDB container contains 3 important databases which stores information about the IP in the feed as well as its metadata for eg.  country/ASN, Org, etc. If the IP is not found in the database that means it’s a new IP reaching the server and whose information is not present in MISP. We then calculate a risk score for the particular IP using an algorithm and various other parameters like geolocation, ASN and Org. More information about the scoring engine can be found here
+Upon running, the data is processed and stored on a MongoDB container. MongoDB container contains 3 important databases which stores information about the IP in the feed as well as its metadata for eg.  country/ASN, Org, etc. If the IP is not found in the database that means it’s a new IP reaching the server and whose information is not present in MISP. We then calculate a risk score for the particular IP using an algorithm and various other parameters like geolocation, ASN and Org. More information about the scoring engine can be found here.
 
 ARTIF has additional functionality to keep track of old feeds. The default configuration replenishes the latest feeds every 24 hrs. After 24 hrs the old feed is moved to another collection and the latest ones are added. For ease of operation, we have added a field called “historical” in the output which tells if the IP was historically bad. A false value indicates that IP has been recently added to the feeds while a True value suggests that IP was already present in older feeds and hence its a historically malicious IP.
 
@@ -141,7 +141,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -s [S]                Required only for the first run
 ```
-You can also look at the cron job by running the below command
+You can also look at the cron job by running the below command -
 ```
 python3 manage.py crontab show
 ```
