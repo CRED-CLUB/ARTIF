@@ -1,0 +1,458 @@
+feeds:
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Botscout C&C Bots
+    provider: Botscout
+    publish: false
+    source_format: freetext
+    threat_level_id: '2'
+    type:
+    - crawlerbot
+    - abuse
+    - spam
+    url: https://iplists.firehol.org/files/botscout_1d.ipset
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Cleantalk Top 20
+    provider: Cleantalk
+    publish: false
+    source_format: freetext
+    threat_level_id: '3'
+    type:
+    - spam
+    url: https://iplists.firehol.org/files/cleantalk_top20.ipset
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: MYIP Web Bot
+    provider: MYIP
+    publish: false
+    source_format: freetext
+    threat_level_id: '1'
+    type:
+    - crawlerbot
+    url: http://myip.ms/files/blacklist/csf/latest_blacklist.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Socks Proxy list
+    provider: Socks Proxy .Net
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type:
+    - proxy
+    url: https://iplists.firehol.org/files/socks_proxy_1d.ipset
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: SSL Proxy List
+    provider: SSL Proxy .Net
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://iplists.firehol.org/files/sslproxies_1d.ipset
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Tor exit nodes
+    provider: Firehol
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://iplists.firehol.org/files/tor_exits_1d.ipset
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: XRoxy Proxy list
+    provider: XRoxy .Net
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://iplists.firehol.org/files/xroxy_1d.ipset
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Apache Blocklist DE
+    provider: Blocklist.DE
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: http://lists.blocklist.de/lists/apache.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Bots Blocklist DE
+    provider: Blocklist.DE
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: http://lists.blocklist.de/lists/bots.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Bruteforce Blocklist DE
+    provider: Blocklist.DE
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: http://lists.blocklist.de/lists/bruteforcelogin.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: FTP Blocklist DE
+    provider: Blocklist.DE
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: http://lists.blocklist.de/lists/ftp.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: SSH Blocklist DE
+    provider: Blocklist.DE
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: http://lists.blocklist.de/lists/ssh.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Strong IPs Blocklist DE
+    provider: Blocklist.DE
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: http://lists.blocklist.de/lists/strongips.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Bruteforce Danger Rulez SK
+    provider: Danger Rulez SK
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: http://danger.rulez.sk/projects/bruteforceblocker/blist.php
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Recursive DNS List
+    provider: Dataplane
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://dataplane.org/dnsrd.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Recursive DNS Any List
+    provider: Dataplane
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://dataplane.org/dnsrdany.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: DNS Version Cataloging
+    provider: Dataplane
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://dataplane.org/dnsversion.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: VNC Remote Access Abuse
+    provider: Dataplane
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://dataplane.org/vncrfb.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: SSH Auth Attacks
+    provider: Dataplane
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://dataplane.org/sshpwauth.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: VoIP dataplane blocklist
+    provider: Dataplane
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://dataplane.org/sipregistration.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Top 20 C Class DShield
+    provider: DShield
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://feeds.dshield.org/block.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Top 1000 DShield
+    provider: DShield
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://isc.sans.edu/api/sources/attacks/1000/
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Top 10000 DShield
+    provider: DShield
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://isc.sans.edu/api/sources/attacks/10000/
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Research Honeypots
+    provider: DShield
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://isc.sans.edu/api/threatcategory/research/
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Cloud IPs
+    provider: DShield
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://isc.sans.edu/api/cloudips
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Greensnow Attack list
+    provider: Greensnow
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: http://blocklist.greensnow.co/greensnow.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: VoIP BL
+    provider: VOIPBL org
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://iplists.firehol.org/files/voipbl.netset
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: C&C Server IP List
+    provider: CyberCrime Tracker
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://iplists.firehol.org/files/cybercrime.ipset
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Botnet Server IPs
+    provider: DynDNS
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://iplists.firehol.org/files/dyndns_ponmocup.ipset
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: FireHol C&C WebClient
+    provider: Firehol
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://iplists.firehol.org/files/firehol_webclient.netset
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Bitcoin Nodes
+    provider: BitNodes
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://iplists.firehol.org/files/bitcoin_nodes_1d.ipset
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Binary Defence Banlist
+    provider: Binary Defence
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://www.binarydefense.com/banlist.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Alienvault IP Reputation
+    provider: Alienvault
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://reputation.alienvault.com/reputation.generic
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: CI Army Blocklist
+    provider: CI Army
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: http://iplists.firehol.org/?ipset=iblocklist_ciarmy_malicious
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Project HoneyPot Abuse
+    provider: Project Honeypot
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: http://www.projecthoneypot.org/list_of_ips.php?t=c&rss=1
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Project HoneyPot Harvesters
+    provider: Project HoneyPot
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: http://www.projecthoneypot.org/list_of_ips.php?t=h&rss=1
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Novasense Attack IPs
+    provider: Novasense
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://novasense-threats.com/download/threats/1d
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Novasense Botnet IPs
+    provider: Novasense
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://novasense-threats.com/download/botnets/1d
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Novasense Abuse IPs
+    provider: Novasense
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://novasense-threats.com/download/abusers/1d
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Feodo C&C Tracker
+    provider: abuse CH
+    publish: false
+    source_format: freetext
+    threat_level_id: '4'
+    type: []
+    url: https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.txt
+- feed:
+    enabled: true
+    input_source: network
+    lookup_visible: true
+    name: Testing
+    provider: CRED
+    publish: false
+    source_format: freetext
+    threat_level_id: '1'
+    type: []
+    url: https://www.circl.lu/doc/misp/feed-osint/2e29b34e-9558-46ba-96b2-211295ece344.json
