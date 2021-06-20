@@ -108,7 +108,7 @@ Starting ARTIF
 
 ARTIF supports synchronization with MISP. It syncs MISP feeds, picking the most recent config from settings.yaml and all the new events modified from MISP are reflected in settings.yaml. To add new IP, just login to MISP and click on add feed page. Once the IP is added, the cronjob will pick it up according to its schedule and will be processed automatically.
 
-## Techincal Details
+## Technical Details
 
 ARTIF being a threat framework, is highly useful for visibility inside organization traffic. It is completely written in python and collects intelligence on an IP from various feeds. It then sends this data to a correlation engine which generates a threat score where historical data is also one of the factors taken into account for threat score calculation.
 
