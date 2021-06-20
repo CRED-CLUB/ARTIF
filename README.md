@@ -31,7 +31,7 @@ It is real time Threat Intel Framework that can help identify malicious IPs even
 
 - What is MISP and how to install?
 
-Taken from MISP : “MISP is an open source software solution for collecting, storing, distributing and sharing cyber security indicators and threats about cyber security incidents analysis and malware analysis. MISP is designed by and for incident analysts, security and ICT professionals or malware reversers to support their day-to-day operations to share structured information efficiently.”
+Taken from MISP : *MISP is an open source software solution for collecting, storing, distributing and sharing cyber security indicators and threats about cyber security incidents analysis and malware analysis. MISP is designed by and for incident analysts, security and ICT professionals or malware reversers to support their day-to-day operations to share structured information efficiently.*
 
 MISP can be installed using source code or their pre-built AWS images. More information about MISP installation can be found at their website.
 
