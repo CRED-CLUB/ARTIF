@@ -25,15 +25,4 @@ urlpatterns = [
             ("front_end_scorer.urls", "front_end_scorer"), namespace="front_end_scorer"
         ),
     ),  # active scoring mechanism for each ip
-    path(
-        "feed/",
-        include(("feed_ingestor.urls", "feed_ingestor"), namespace="feed_ingestor"),
-    ),  # for feed related activities like listing all feeds/events and their properties. Also adding or removing a feed/event
-    path(
-        "data/",
-        include(
-            ("database_connector.urls", "database_connector"),
-            namespace="database_connector",
-        ),
-    ),  # for historical data on a particular ASN or ORG (ips seen, feeds spotted in, trend)
 ]
