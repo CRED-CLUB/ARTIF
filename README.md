@@ -178,6 +178,12 @@ This indeed takes time sometimes from 30 mins to 90 mins depending upon your int
 
 Solution: In such cases, run the update_check.py file without -s argument. This would download all the IPs from the feed. This error generally happens when you abruptly interrupt the execution of update_check.py during its initial phase.
 
+## Roadmap
+
+- Application Firewall integration support with ARTIF for automatic blocking malicious IPs based on their threat score.
+- Metric visibility over UI dashboard in form of graphical representation to better visualize the threats.
+  
+
 ## License
 
 [MIT](https://github.com/CRED-Dev/ARTIF/blob/develop/LICENSE)
@@ -188,11 +194,7 @@ Solution: In such cases, run the update_check.py file without -s argument. This 
 - [@0xDivyanshu](https://www.github.com/0xDivyanshu)
 - [@logicbomb-1](https://github.com/logicbomb-1/)
   
-## Roadmap
 
-- Application Firewall integration support with ARTIF for automatic blocking malicious IPs based on their threat score.
-- Metric visibility over UI dashboard in form of graphical representation to better visualize the threats.
-  
 ## Acknowledgements
 
  - [MISP](https://github.com/MISP/MISP)
