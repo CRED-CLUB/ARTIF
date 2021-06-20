@@ -90,7 +90,7 @@ The output being
 ```
 {"is_IoC": false, "is_Active": false, "metadata": {"asn": "AS165**", "country": "XXX", "org": "XXX"}, "score": 80.14671726301682, "description": "XXX", "blacklists": "", "type": "", "historical":false, verdict": "No action needed"}
 ```
-The score represents a lower risk for the IP as the threat is high. The higher the score the lesser the non-malicious IP it is. 
+The score represents a lower risk for the IP as the threat score is high. The higher the score the lesser the non-malicious IP it is. 
 
 **Note:** Instance with 8GB RAM are recommended for ARTIF  installation.
 
