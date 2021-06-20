@@ -11,7 +11,7 @@ Key features of ARTIF includes:-
 - Modular Architecture: The project is plugin-based and can be extended easily by just modifyng threat feeds in MISP. There would be no downtime to the actual service as these would be in-line update.
 - Alerting: Extended feature providng seamless integration with slack for active alerting. It also provides better attack profiling and visualization.
 
-Some use Cases
+Some use Cases:-
 - Threat Detection
 - Logging and Monitoring
 - User profiling
@@ -108,18 +108,6 @@ Starting ARTIF
 
 ARTIF supports synchronization with MISP. It syncs MISP feeds, picking the most recent config from settings.yaml and all the new events modified from MISP are reflected in settings.yaml. To add new IP, just login to MISP and click on add feed page. Once the IP is added, the cronjob will pick it up according to its schedule and will be processed automatically.
 
-## Contributing
-
-Contributions are always welcome! 
-See `contributing.md` for ways to get started. Please adhere to this project's `code of conduct`.
-
-## Communicating with Team
-The easiest way to communicate with the team is via GitHub Issues.
-
-Please file new issues, feature requests, and suggestions, but search for similar open/closed pre-existing issues before creating a new issue.  
-
----
-
 ## Documentation
 
 ARTIF being a threat framework, is highly useful for visibility inside organization traffic. It is completely written in python and collects intelligence on an IP from various feeds. It then sends this data to a correlation engine which generates a threat score where historical data is also one of the factors taken into account for threat score calculation.
@@ -185,6 +173,18 @@ Solution: In such cases, run the update_check.py file without -s argument. This 
 ## License
 
 [MIT](https://github.com/CRED-Dev/ARTIF/blob/develop/LICENSE)
+
+## Contributing
+
+Contributions are always welcome! 
+See `contributing.md` for ways to get started. Please adhere to this project's `code of conduct`.
+
+## Communicating with Team
+The easiest way to communicate with the team is via GitHub Issues.
+
+Please file new issues, feature requests, and suggestions, but search for similar open/closed pre-existing issues before creating a new issue.  
+
+---
 
   
 ## Authors
