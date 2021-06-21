@@ -3,7 +3,7 @@
 
 ![logo](images/logo.png)
 
-ARTIF is a new advanced threat intelligence framework built that adds another abstraction layer on the top of MISP to identify threats and malicious web traffic on the basis of IP reputation and historical data. It also performs automatic enrichment and threat scoring by collecting, processing and correlating observables based on different factors. 
+ARTIF is a new advanced real time threat intelligence framework built that adds another abstraction layer on the top of MISP to identify threats and malicious web traffic on the basis of IP reputation and historical data. It also performs automatic enrichment and threat scoring by collecting, processing and correlating observables based on different factors. 
 
 Key features of ARTIF includes:- 
 - Scoring System: Enriches IP addresses with threat metadata including a threat score which can act as a threshold value for security teams to take action on.
