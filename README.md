@@ -51,7 +51,7 @@ To add your sub key edit docker-compose.yaml
 
 1. Clone the repository using git or download the zip file.
 ```
-git clone https://github.com/CRED-Dev/ARTIF/
+git clone https://github.com/CRED-CLUB/ARTIF/
 ````
 2. Build the docker by changing the working directory to the ARTIF folder and start the docker containers for it.
 ```
