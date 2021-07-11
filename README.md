@@ -8,7 +8,7 @@ ARTIF is a new advanced real time threat intelligence framework built that adds 
 Key features of ARTIF includes:- 
 - Scoring System: Enriches IP addresses with threat metadata including a threat score which can act as a threshold value for security teams to take action on.
 - Containerized: ARTIF is deployed using containers and hence provides ease for deployment.
-- Modular Architecture: The project is plugin-based and can be extended easily by just modifyng threat feeds in MISP. There would be no downtime to the actual service as these would be in-line update.
+- Modular Architecture: The project is plugin-based and can be extended easily by just modifying threat feeds in MISP. There would be no downtime to the actual service as these would be in-line update.
 - Alerting: Extended feature providng seamless integration with slack for active alerting. It also provides better attack profiling and visualization.
 
 Some use Cases:-
